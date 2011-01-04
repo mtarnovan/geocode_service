@@ -7,6 +7,7 @@ Provides a minimalistic web service to map IPs to countries from a local MySQL d
 <pre>
 gem i bundler
 bundle install
+[edit db/database.yml and create the database geocode_service]
 rake load_data
 rackup
 </pre>
