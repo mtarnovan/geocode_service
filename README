@@ -1,0 +1,6 @@
+Provides a minimalistic web service to map IPs to countries from a local MySQL database generated from data available from maxmind.com
+
+Usage:
+
+rake load_data
+rackup
