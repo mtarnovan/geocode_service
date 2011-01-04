@@ -9,6 +9,8 @@ gem i bundler
 bundle install
 [edit db/database.yml and create the database geocode_service]
 rake load_data
+[for production, set RACK_ENV accordingly:]
+RACK_ENV=production rake load_data
 rackup
 </pre>
 
@@ -17,6 +19,8 @@ rackup
 <pre>
 curl http://localhost:9292/country_code_from_ip/[some ip here]
 </pre>
+
+Empty body and 404 response status means IP was not found in the database.
 
 ## Why ?
 
