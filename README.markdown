@@ -15,5 +15,14 @@ rackup
 ## Test it:
 
 <pre>
-curl http://localhost:9292/country_code_from_ip/<some ip here>
+curl http://localhost:9292/country_code_from_ip/[some ip here]
 </pre>
+
+## Why ?
+
+* fast
+* avoids external dependencies, but reusable across multiple apps
+
+## TODO
+
+* add authentication ?
