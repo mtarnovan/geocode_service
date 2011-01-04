@@ -13,7 +13,7 @@ desc "Create and populate ip <-> countries database"
 task :load_data do
   puts "Dropping table ip_country"
   $db.query <<-EOS
-    DROP TABLE ip_country;
+    DROP TABLE IF EXISTS ip_country;
   EOS
   
   puts "Creating table ip_country"
