@@ -2,5 +2,7 @@ Provides a minimalistic web service to map IPs to countries from a local MySQL d
 
 Usage:
 
+gem i bundler
+bundle install
 rake load_data
 rackup
