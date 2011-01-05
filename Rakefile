@@ -11,6 +11,7 @@ require 'db/db_connect.rb'
 
 desc "Create and populate ip <-> countries database"
 task :load_data do
+  connect
   puts "Dropping table ip_country"
   $db.query <<-EOS
     DROP TABLE IF EXISTS ip_country;
