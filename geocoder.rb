@@ -15,12 +15,13 @@ class GeoCoder
     EOS
     res.first
   rescue Mysql2::Error => ex
+    # connection might have timed out, so try to reconnect
     connect
     @@retry_count += 1
     if @@retry_count < 5
       retry
     else
-      puts "Failed after #{@@retry_count} retries #{ex.message}"
+      puts "Failed after #{@@retry_count} retries:\n #{ex.message}"
       @@retry_count = 0      
     end
   end
