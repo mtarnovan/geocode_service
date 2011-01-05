@@ -1,3 +1,4 @@
 .bundle
 data/*.csv
-log/*
+log/*.log
+
