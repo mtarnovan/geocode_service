@@ -4,6 +4,7 @@ class GeoCoder
   @@retry_count = 0
   
   def self.country_code_from_ip(ip)
+    ip = $db.escape(ip)
     res = $db.query <<-EOS, :as => :array
       SELECT country_code
       FROM ip_country
