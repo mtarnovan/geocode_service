@@ -28,7 +28,7 @@ task :load_data do
       country_code CHAR(2)       NOT NULL,
       PRIMARY KEY (id),
       SPATIAL INDEX (ip_poly)
-    );    
+    ) ENGINE=MyISAM;    
   EOS
   
   data_file_path = "data/GeoIPCountryWhois.csv"
