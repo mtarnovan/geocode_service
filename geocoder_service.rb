@@ -6,14 +6,14 @@ require 'utils'
 configure do
   require 'db/db_connect'
   require 'geocoder'
+  connect
 end
 
 class GeocodeService < Sinatra::Base
+  
   get '/country_code_from_ip/:ip' do
     country = GeoCoder.country_code_from_ip params[:ip]
-    if country.nil? || country == ""
-      response.status = 404
-    end
+    response.status = 404 if country.nil? || country == ""
     country
   end
   
