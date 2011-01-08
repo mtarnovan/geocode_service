@@ -70,3 +70,6 @@ application controller like this:
 ## TODO
 
 * add authentication ?
+
+
+Copyright (c) 2011 [Mihai Târnovan, Cubus Arts](http://cubus.ro "Cubus Arts"), released under the MIT license (see LICENSE)
